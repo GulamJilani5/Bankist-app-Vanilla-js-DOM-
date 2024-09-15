@@ -1,0 +1,57 @@
+#lec-PROJECT: "Bankist"Website
+    -5m.10s Anchor tag's hyperlink attribute href="#"
+          When click on the anchor link it default make the page move to the top
+          so in order to prevent it we use e.preventDefault()
+
+#lec-188 Styles, Attributes and Classes
+    -12m.38s getting non standard attributes with getAttributes()
+            setAttributes("", "")
+
+#lec191,192 Event Propagation: Bubbling and Capturing  , Event Propagation in Practices
+     event bubbling, Capturing, e.target(target phase element), e.currentTarget(Where event handler has been attached, equal to the 'this'), 
+      'this' refers to the element on which event has been added. this === e.currentTarget is true
+
+#lec193 Event Delegation: Implementing Page Navigation
+    -9m.40s  Best use case of the event delegation(event capturing and bubbling)
+    -13m.30s  Amazing learning of how to avoid click between the links and only the click on link works. 
+                e.target.classList.contains('.nav__link')
+    -18m.8s  Great use case of the event delegation(capturing and bubbling).
+             A dynamic button or elements
+#lec194 DOM Traversing
+    -13m.40s Comparison between the element is possible and works fine
+
+#lec195 Building a tabbed component
+    -6m.20s Event delegation use case of the tabbed component 
+    -8m.10s Amazing concept to learn about clicking of the the button even when it has some span element
+      e.target.closest('.operations__tab')
+    -12m.53s Clicking issue that occurred due to closest() method, we will resolve it with Gaurd Clause.
+     if(!clicked) return 
+    -17m.20s Best use case of the data atrribute
+
+#196 Passing arguments to Event handler
+     Getting the knowledge of the difference between 'mouseover' and 'mouseenter'
+    -4m.20s Comparison with tabbed component why to use classList()
+    -6m.20s selecting siblings and child element based on the parent element(***need to understand better)
+    -12m.50s addEventHandler is expecting a callback function(evetn handler function) which will take 
+     event object as options and return some values. 
+     There are two ways to resolve the issue one is calling the event handler function inside the callback function
+     second approach is using bind function
+
+#197 Implementing a Sticky Navigation: The Scroll Event
+    -2m.32s Getting to know about window.scrollY property better
+    -7m.10s scroll event is bad for performance because it will make the callback function
+     get executing on every scrolling
+
+#198 A better way: The intersection Observer API
+    - It is giving amazing ideas to manage scrolling in javascript
+
+#199 Revealing Elements on Scroll 
+
+#200 Lazy Loading Images
+     Using dataset attribute to initially show lesser size faded image.
+     And then loading the actual image when we are near to the see the image on viewport.
+
+     1m.0s how image has been managed in the html with the dataset attribute.
+     11m.12s How we are removing lazy blurred class, because when lazy image 
+              is replaced with the actual image then javascript emits the 'load' event
+              
